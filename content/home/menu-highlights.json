@@ -1,0 +1,24 @@
+{
+  "sectionLabel": "Ons menu",
+  "title": "De heerlijkste gerechten en drankjes",
+  "description": "De keukenbrigade maakt de heerlijkste salades, vis- en vleesgerechten. Voor ieder wat wils!",
+  "buttonText": "Bekijk de menukaarten",
+  "dishes": [
+    {
+      "name": "Diner",
+      "image": "https://media-01.imu.nl/storage/venneperlodge.nl/23681/luxe-eten-in-nieuw-vennep-lisserbroek-lisse-en-hoofdorp--ga-naar-venneper-lodge--800x600.png"
+    },
+    {
+      "name": "Pok\u00e9 Bowl",
+      "image": "https://media-01.imu.nl/storage/venneperlodge.nl/23669/in-nieuw-vennep-haal-je-een-salade-of-pokebowl-bij-venneper-lodge.jpg"
+    },
+    {
+      "name": "Lunch",
+      "image": "https://media-01.imu.nl/storage/venneperlodge.nl/23669/een-hamburger-in-nieuw-vennep-haal-je-bij-venneper-lodge.jpg"
+    },
+    {
+      "name": "Cocktails",
+      "image": "https://media-01.imu.nl/storage/venneperlodge.nl/23681/waar-heb-je-lekkere-drankjes-in-nieuw-vennep-lisserbroek-lisse-en-hoofdorp--dat-is-bij-venneper-lodge.png"
+    }
+  ]
+}

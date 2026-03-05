@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { Briefcase } from 'lucide-react'
 import SEO from '../components/SEO'
 import SectionHeading from '../components/ui/SectionHeading'
-import { jobs } from '../data/jobs'
+import { jobs } from '../lib/content'
 
 const jobPostingSchema = {
   '@context': 'https://schema.org',

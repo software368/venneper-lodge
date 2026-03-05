@@ -3,11 +3,11 @@ import { motion } from 'framer-motion'
 import SEO from '../components/SEO'
 import SectionHeading from '../components/ui/SectionHeading'
 import TabNav from '../components/ui/TabNav'
-import { menuSections } from '../data/menu'
+import { menuSections } from '../lib/content'
 
 export default function MenuPage() {
   const [activeTab, setActiveTab] = useState('ontbijt')
-  const activeSection = menuSections.find(s => s.id === activeTab)
+  const activeSection = menuSections.find(s => s.slug === activeTab)
 
   return (
     <div className="pt-28 pb-24">
@@ -24,14 +24,14 @@ export default function MenuPage() {
         />
 
         <TabNav
-          tabs={menuSections.map(s => ({ id: s.id, label: s.label }))}
+          tabs={menuSections.map(s => ({ id: s.slug, label: s.label }))}
           activeTab={activeTab}
           onTabChange={setActiveTab}
         />
 
         {activeSection && (
           <motion.div
-            key={activeSection.id}
+            key={activeSection.slug}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}

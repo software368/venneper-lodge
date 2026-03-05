@@ -1,0 +1,24 @@
+{
+  "slug": "lunch",
+  "label": "Lunch",
+  "order": 2,
+  "categories": [
+    {
+      "name": "Salades",
+      "items": [
+        { "name": "Lodge Salade", "description": "Gegrilde kip, avocado, tomaat, ei, spekjes en honingmosterd dressing", "price": "15,50" },
+        { "name": "Caesar Salade", "description": "Romaine sla, parmezaan, croutons, ansjovis en caesardressing", "price": "14,00" },
+        { "name": "Pok\u00e9 Bowl", "description": "Sushi rijst, zalm, avocado, edamame, wakame en sojadressing", "price": "16,50" }
+      ]
+    },
+    {
+      "name": "Broodjes & Burgers",
+      "items": [
+        { "name": "Lodge Burger", "description": "Angus beef, cheddar, bacon, truffelmayo, brioche bun met frites", "price": "17,50" },
+        { "name": "Club Sandwich", "description": "Kip, bacon, ei, tomaat, sla op toast met frites", "price": "14,50" },
+        { "name": "Tosti Truffeltip", "description": "Truffeltip, oude kaas, rucola op zuurdesem", "price": "12,50" },
+        { "name": "Crispy Chicken Wrap", "description": "Krokante kip, sriracha mayo, ijsbergsla, tomaat", "price": "13,50" }
+      ]
+    }
+  ]
+}

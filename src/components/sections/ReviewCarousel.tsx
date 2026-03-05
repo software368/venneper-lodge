@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import SectionHeading from '../ui/SectionHeading'
 import ReviewCard from '../ui/ReviewCard'
-import { reviews } from '../../data/reviews'
+import { reviews } from '../../lib/content'
 
 export default function ReviewCarousel() {
   const [index, setIndex] = useState(0)

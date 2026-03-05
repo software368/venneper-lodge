@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "title": "Ontbijt \u00b7 Lunch \u00b7 Diner",
+      "description": "Voor ieder moment van de dag \u2014 van heerlijk ontbijt tot uitgebreid diner.",
+      "image": "https://media-01.imu.nl/storage/venneperlodge.nl/23669/een-hamburger-in-nieuw-vennep-haal-je-bij-venneper-lodge.jpg",
+      "link": "/menu"
+    },
+    {
+      "title": "Kids",
+      "description": "Binnen en buiten speelparadijs met kinderbioscoop en speurtochten.",
+      "image": "https://media-01.imu.nl/storage/venneperlodge.nl/23681/leukste-speeltuin-voor-kinderen-met-horeca_venneper-lodge_nieuw_vennep_hoofddorp.jpg",
+      "link": "/beleving#kids"
+    },
+    {
+      "title": "Groepen & Feesten",
+      "description": "Iets te vieren met een grotere groep? Wij regelen het!",
+      "image": "https://media-01.imu.nl/storage/venneperlodge.nl/23669/groepenn_gezelschappen_venneper_lodge-500x500.png",
+      "link": "/beleving#groepen"
+    }
+  ]
+}

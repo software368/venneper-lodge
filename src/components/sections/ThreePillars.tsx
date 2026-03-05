@@ -1,33 +1,13 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-
-const pillars = [
-  {
-    title: 'Ontbijt · Lunch · Diner',
-    description: 'Voor ieder moment van de dag — van heerlijk ontbijt tot uitgebreid diner.',
-    image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23669/een-hamburger-in-nieuw-vennep-haal-je-bij-venneper-lodge.jpg',
-    link: '/menu',
-  },
-  {
-    title: 'Kids',
-    description: 'Binnen en buiten speelparadijs met kinderbioscoop en speurtochten.',
-    image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23681/leukste-speeltuin-voor-kinderen-met-horeca_venneper-lodge_nieuw_vennep_hoofddorp.jpg',
-    link: '/beleving#kids',
-  },
-  {
-    title: 'Groepen & Feesten',
-    description: 'Iets te vieren met een grotere groep? Wij regelen het!',
-    image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23669/groepenn_gezelschappen_venneper_lodge-500x500.png',
-    link: '/beleving#groepen',
-  },
-]
+import { pillars } from '../../lib/content'
 
 export default function ThreePillars() {
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {pillars.map((pillar, i) => (
+          {pillars.items.map((pillar, i) => (
             <motion.div
               key={pillar.title}
               initial={{ opacity: 0, y: 40 }}

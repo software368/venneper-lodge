@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { MapPin, Clock, Phone } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { reservationCta } from '../../lib/content'
 
 export default function ReservationCTA() {
   return (
@@ -14,19 +15,19 @@ export default function ReservationCTA() {
             transition={{ duration: 0.6 }}
           >
             <span className="text-burnt-amber text-sm font-semibold uppercase tracking-widest">
-              Reserveren
+              {reservationCta.label}
             </span>
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-warm-white mt-2">
-              Kom genieten en laat u verrassen!
+              {reservationCta.heading}
             </h2>
             <p className="mt-4 text-warm-sand/80 text-lg leading-relaxed">
-              Weer of geen weer, bij Venneper Lodge heten wij u te allen tijde hartelijk welkom. Jong en oud, groot en klein — het is een fijne plek voor iedereen.
+              {reservationCta.text}
             </p>
             <Link
-              to="/contact#reserveren"
+              to={reservationCta.buttonLink}
               className="inline-block mt-8 rounded-full bg-burnt-amber px-10 py-4 text-lg font-semibold text-white transition-all hover:bg-burnt-amber/90 hover:scale-105"
             >
-              Reserveer nu
+              {reservationCta.buttonText}
             </Link>
           </motion.div>
 
@@ -41,22 +42,22 @@ export default function ReservationCTA() {
               <MapPin size={24} className="text-burnt-amber shrink-0 mt-1" />
               <div>
                 <p className="font-semibold text-warm-white">Adres</p>
-                <p>Getsewoudweg 1, 2151 MS Nieuw Vennep</p>
+                <p>{reservationCta.address}</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <Clock size={24} className="text-burnt-amber shrink-0 mt-1" />
               <div>
                 <p className="font-semibold text-warm-white">Openingstijden</p>
-                <p>Zondag t/m donderdag: 09:00 — 21:00</p>
-                <p>Vrijdag & zaterdag: 09:00 — 21:30</p>
+                <p>{reservationCta.openWeekdays}</p>
+                <p>{reservationCta.openWeekends}</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <Phone size={24} className="text-burnt-amber shrink-0 mt-1" />
               <div>
                 <p className="font-semibold text-warm-white">Telefoon</p>
-                <a href="tel:0252348652" className="hover:text-warm-white transition-colors">0252 348 652</a>
+                <a href={`tel:${reservationCta.phone.replace(/\s/g, '')}`} className="hover:text-warm-white transition-colors">{reservationCta.phone}</a>
               </div>
             </div>
           </motion.div>

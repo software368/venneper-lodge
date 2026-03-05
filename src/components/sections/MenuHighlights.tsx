@@ -1,25 +1,19 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import SectionHeading from '../ui/SectionHeading'
-
-const dishes = [
-  { name: 'Diner', image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23681/luxe-eten-in-nieuw-vennep-lisserbroek-lisse-en-hoofdorp--ga-naar-venneper-lodge--800x600.png' },
-  { name: 'Poké Bowl', image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23669/in-nieuw-vennep-haal-je-een-salade-of-pokebowl-bij-venneper-lodge.jpg' },
-  { name: 'Lunch', image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23669/een-hamburger-in-nieuw-vennep-haal-je-bij-venneper-lodge.jpg' },
-  { name: 'Cocktails', image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23681/waar-heb-je-lekkere-drankjes-in-nieuw-vennep-lisserbroek-lisse-en-hoofdorp--dat-is-bij-venneper-lodge.png' },
-]
+import { menuHighlights } from '../../lib/content'
 
 export default function MenuHighlights() {
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          label="Ons menu"
-          title="De heerlijkste gerechten en drankjes"
-          description="De keukenbrigade maakt de heerlijkste salades, vis- en vleesgerechten. Voor ieder wat wils!"
+          label={menuHighlights.sectionLabel}
+          title={menuHighlights.title}
+          description={menuHighlights.description}
         />
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {dishes.map((dish, i) => (
+          {menuHighlights.dishes.map((dish, i) => (
             <motion.div
               key={dish.name}
               initial={{ opacity: 0, y: 30 }}
@@ -45,7 +39,7 @@ export default function MenuHighlights() {
             to="/menu"
             className="inline-block rounded-full border-2 border-forest-green px-8 py-3 font-semibold text-forest-green transition-all hover:bg-forest-green hover:text-warm-white"
           >
-            Bekijk de menukaarten
+            {menuHighlights.buttonText}
           </Link>
         </div>
       </div>

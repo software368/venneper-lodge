@@ -1,5 +1,11 @@
 import { Star } from 'lucide-react'
-import type { Review } from '../../data/reviews'
+
+interface Review {
+  name: string
+  rating: number
+  text: string
+  date: string
+}
 
 export default function ReviewCard({ review }: { review: Review }) {
   return (

@@ -1,0 +1,34 @@
+{
+  "slug": "drankkaart",
+  "label": "Drankkaart",
+  "order": 5,
+  "categories": [
+    {
+      "name": "Cocktails",
+      "items": [
+        { "name": "Aperol Spritz", "description": "Aperol, prosecco, spa rood", "price": "10,50" },
+        { "name": "Espresso Martini", "description": "Vodka, Kahl\u00faa, verse espresso", "price": "12,00" },
+        { "name": "Lodge Mojito", "description": "Rum, limoen, munt, suiker, spa bruisend", "price": "11,00" },
+        { "name": "Negroni", "description": "Gin, Campari, rode vermout", "price": "11,50" }
+      ]
+    },
+    {
+      "name": "Wijnen",
+      "items": [
+        { "name": "Huiswijn Wit", "description": "Fris en fruitig, per glas", "price": "5,50" },
+        { "name": "Huiswijn Rood", "description": "Vol en rond, per glas", "price": "5,50" },
+        { "name": "Prosecco", "description": "Per glas", "price": "6,50" },
+        { "name": "Champagne", "description": "Mo\u00ebt & Chandon, per glas", "price": "12,00" }
+      ]
+    },
+    {
+      "name": "Bieren",
+      "items": [
+        { "name": "Pilsner", "description": "Vers getapt, 25cl", "price": "3,50" },
+        { "name": "IPA", "description": "Jopen IPA, 33cl", "price": "5,50" },
+        { "name": "Witbier", "description": "Fris en kruidig, 33cl", "price": "5,00" },
+        { "name": "Alcoholvrij", "description": "Diverse merken beschikbaar", "price": "3,50" }
+      ]
+    }
+  ]
+}

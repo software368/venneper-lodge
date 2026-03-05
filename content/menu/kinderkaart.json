@@ -1,0 +1,17 @@
+{
+  "slug": "kinderkaart",
+  "label": "Kinderkaart",
+  "order": 4,
+  "categories": [
+    {
+      "name": "Voor de Kleintjes",
+      "items": [
+        { "name": "Kinderpannenkoek", "description": "Pannenkoek met stroop of poedersuiker", "price": "7,50" },
+        { "name": "Mini Burger", "description": "Klein hamburger met frietjes", "price": "9,50" },
+        { "name": "Kaassoufl\u00e9 met Frites", "description": "Twee kaassoufl\u00e9s met frietjes en appelmoes", "price": "8,50" },
+        { "name": "Pasta Bolognese", "description": "Penne met huisgemaakte bolognesesaus", "price": "8,50" },
+        { "name": "Chicken Nuggets", "description": "Met frietjes en mayonaise", "price": "8,50" }
+      ]
+    }
+  ]
+}

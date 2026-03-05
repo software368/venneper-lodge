@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { hero } from '../../lib/content'
 
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden grain-overlay">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url(/hero.jpg)' }}
+        style={{ backgroundImage: `url(${hero.backgroundImage})` }}
         role="img"
         aria-label="Venneper Lodge aan de rand van het Venneperhout"
       />
@@ -19,7 +20,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold text-warm-white"
         >
-          Venneper Lodge
+          {hero.heading}
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -27,7 +28,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-4 text-xl sm:text-2xl text-warm-sand/90 font-light tracking-wide"
         >
-          Een hippe plek voor ALLE leeftijden
+          {hero.tagline}
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -36,10 +37,10 @@ export default function Hero() {
           className="mt-10"
         >
           <Link
-            to="/contact#reserveren"
+            to={hero.buttonLink}
             className="inline-block rounded-full bg-burnt-amber px-10 py-4 text-lg font-semibold text-white transition-all hover:bg-burnt-amber/90 hover:scale-105 shadow-lg shadow-burnt-amber/30"
           >
-            Reserveer een tafel
+            {hero.buttonText}
           </Link>
         </motion.div>
       </div>

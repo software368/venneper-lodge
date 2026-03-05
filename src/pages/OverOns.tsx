@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import SEO from '../components/SEO'
 import SectionHeading from '../components/ui/SectionHeading'
-import { teamMembers } from '../data/team'
+import { teamMembers } from '../lib/content'
 
 const galleryPhotos = [
   { src: 'https://media-01.imu.nl/storage/venneperlodge.nl/23681/venneper-lodge-is-de-mooiste-horeca-locatie-van-nieuw-vennep-lisserbroek-lisse-en-hoofddorp.png', alt: 'Het gebouw van Venneper Lodge' },

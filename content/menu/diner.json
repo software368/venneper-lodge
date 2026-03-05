@@ -1,0 +1,33 @@
+{
+  "slug": "diner",
+  "label": "Diner",
+  "order": 3,
+  "categories": [
+    {
+      "name": "Voorgerechten",
+      "items": [
+        { "name": "Carpaccio", "description": "Rundercarpaccio, rucola, parmezaan, pijnboompitten, truffelolie", "price": "14,50" },
+        { "name": "Garnalencocktail", "description": "Hollandse garnalen, avocado, cocktailsaus, toast", "price": "13,50" },
+        { "name": "Soep van de Dag", "description": "Dagverse soep met brood en boter", "price": "8,50" }
+      ]
+    },
+    {
+      "name": "Hoofdgerechten",
+      "items": [
+        { "name": "Tournedos", "description": "Ossenhaas, truffel jus, seizoensgroenten, aardappelgratin", "price": "29,50" },
+        { "name": "Zeebaars", "description": "Gegrilde zeebaars, risotto, geroosterde groenten, bisque", "price": "24,50" },
+        { "name": "Lodge Ribeye", "description": "300gr ribeye, kruidenboter, frites, salade", "price": "27,50" },
+        { "name": "Pasta Truffle", "description": "Verse tagliatelle, truffelcr\u00e8me, paddenstoelen, parmezaan", "price": "19,50" },
+        { "name": "Vegan Bowl", "description": "Quinoa, geroosterde zoete aardappel, hummus, granaatappel", "price": "17,50" }
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        { "name": "Cr\u00e8me Br\u00fbl\u00e9e", "description": "Klassieke cr\u00e8me br\u00fbl\u00e9e met vanille", "price": "9,50" },
+        { "name": "Chocolade Fondant", "description": "Warm met vanille-ijs en rode vruchten", "price": "10,50" },
+        { "name": "Tiramisu", "description": "Huisgemaakt met mascarpone en espresso", "price": "9,50" }
+      ]
+    }
+  ]
+}

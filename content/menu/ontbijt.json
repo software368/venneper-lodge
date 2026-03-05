@@ -1,0 +1,26 @@
+{
+  "slug": "ontbijt",
+  "label": "Ontbijt",
+  "order": 1,
+  "categories": [
+    {
+      "name": "Klassiekers",
+      "items": [
+        { "name": "Lodge Ontbijt", "description": "Vers brood, croissant, jam, kaas, ham, ei, jus d'orange en koffie of thee", "price": "14,50" },
+        { "name": "Pancakes Stack", "description": "Amerikaanse pancakes met ahornsiroop, vers fruit en slagroom", "price": "12,50" },
+        { "name": "A\u00e7a\u00ed Bowl", "description": "A\u00e7a\u00ed, granola, vers fruit, kokos en honing", "price": "11,50" },
+        { "name": "Eggs Benedict", "description": "Gepocheerde eieren, hollandaisesaus op brioche met bacon of zalm", "price": "13,50" },
+        { "name": "Avocado Toast", "description": "Geroosterd zuurdesembrood, avocado, gepocheerd ei, chiliflakes", "price": "12,00" }
+      ]
+    },
+    {
+      "name": "Warme Dranken",
+      "items": [
+        { "name": "Cappuccino", "description": "Dubbele espresso met opgeschuimde melk", "price": "3,50" },
+        { "name": "Flat White", "description": "Dubbele espresso met zijdezachte melk", "price": "3,75" },
+        { "name": "Matcha Latte", "description": "Ceremoni\u00eble matcha met havermolk", "price": "4,50" },
+        { "name": "Chai Latte", "description": "Gekruide thee met opgeschuimde melk", "price": "4,00" }
+      ]
+    }
+  ]
+}

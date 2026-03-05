@@ -1,23 +1,11 @@
 import { motion } from 'framer-motion'
-
-const blocks = [
-  {
-    image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23681/fantastische-horecazaak-hoofddorp-nieuw-vennep_het-beste-restaurant-venneper-lodge.jpg',
-    title: 'Aan de rand van het Venneperhout',
-    text: 'Als u vanaf onze ruime parkeerplaats richting het restaurant loopt ziet u een prachtige moderne houten Lodge met een mooi groene aangelegde tuin en een speeltuin waar kinderen zich kunnen uitleven. Het ruime terras met lounge is een unieke plek om buiten te genieten van een heerlijke maaltijd.',
-  },
-  {
-    image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23681/welk-restaurant-heeft-een-goed-terras-in-nieuw-vennep-lisserbroek-lisse-en-hoofdorp--dat-is-bij-venneper-lodge.png',
-    title: 'Een hippe plek voor iedereen',
-    text: 'Waar vindt u toch dat ene restaurant waar het voor werkelijk iedereen oprecht genieten is? Blije kids en blije ouders? Heerlijk spelen en relaxed genieten? De heerlijkste gerechten en drankjes voor klein en groot? Zoek niet verder, want Venneper Lodge wordt uw vaste plek!',
-  },
-]
+import { story } from '../../lib/content'
 
 export default function StoryStrip() {
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 bg-warm-sand/30">
       <div className="mx-auto max-w-7xl space-y-20">
-        {blocks.map((block, i) => (
+        {story.blocks.map((block, i) => (
           <motion.div
             key={block.title}
             initial={{ opacity: 0, y: 40 }}
