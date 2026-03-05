@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion'
-import { TreePine, Film, PartyPopper, Building2, Presentation, Wifi, MonitorPlay } from 'lucide-react'
+import { TreePine, Film, PartyPopper, Building2, Presentation, Wifi, MonitorPlay, MapPinned } from 'lucide-react'
 import SEO from '../components/SEO'
 import SectionHeading from '../components/ui/SectionHeading'
 
 const kidsFeatures = [
   { icon: TreePine, title: 'Buitenspeeltuin', description: 'Een afgeschermd outdoor speelparadijs waar kinderen zich kunnen uitleven met klimtoestellen.' },
   { icon: Film, title: 'Kinderbioscoop', description: 'Binnen een indoorspeeltuin met een eigen bioscoop. De jongste gasten vermaken zich opperbest!' },
-  { icon: PartyPopper, title: 'Speurtocht', description: 'Beleef avontuur met onze GPS speurtocht in het Venneperhout. Voor kinderen 7+ en gezinnen.' },
+  { icon: PartyPopper, title: 'Kinderfeestjes', description: 'Vier je verjaardag bij Venneper Lodge met onze leuke feestpakketten!' },
 ]
 
 const birthdayPackages = [
-  { name: 'Speurtocht Spektakel', description: 'GPS speurtocht in het Venneperhout. Ontvang een heerlijk broodplankje na voltooien van de speurtocht.', price: '€20,00 p.p. | Duur: 1,5 uur', image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23681/speurtocht-bij-venneper-lodge.png' },
-  { name: 'Pannenkoekenfeest', description: 'Voor de jarige en zijn/haar vriendjes en vriendinnetjes organiseren wij leuke kinderfeestjes met pannenkoeken.', price: '€19,00 p.p. | Duur: 1,5 uur', image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23681/kinderfeestjes_venneper_lodge-500x333.png' },
+  { name: 'Speurtocht Spektakel', description: 'Met z\'n allen "Lang Zal Ze Leven" zingen met vuurwerkfontein, GPS speurtocht in het bos, hapjes met onbeperkt drinken en versierd ijsje als afsluiting.', price: '€20,00 p.p. | Duur: 1,5 uur', image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23681/speurtocht-bij-venneper-lodge.png' },
+  { name: 'Pannenkoekenfeest', description: 'Met z\'n allen "Lang Zal Ze Leven" zingen met vuurwerkfontein, zelf pannenkoeken versieren, spelen in de speeltuin en bioscoop, en als afsluiting een ijsje.', price: '€19,00 p.p. | Duur: 1,5 uur', image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23681/kinderfeestjes_venneper_lodge-500x333.png' },
 ]
 
 const zakelijkFeatures = [
@@ -24,7 +24,7 @@ const zakelijkFeatures = [
 const fadeIn = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
+  viewport: { once: true as const },
   transition: { duration: 0.6 },
 }
 
@@ -33,13 +33,13 @@ export default function Beleving() {
     <div className="pt-28 pb-24">
       <SEO
         title="Beleving"
-        description="Ontdek de beleving bij Venneper Lodge: speeltuin, kinderfeestjes, groepsarrangementen, private dining en vergaderruimtes in Nieuw-Vennep."
+        description="Ontdek de beleving bij Venneper Lodge: speeltuin, kinderfeestjes, speurtocht, groepsarrangementen, private dining en vergaderruimtes in Nieuw-Vennep."
         path="/beleving"
       />
+
       {/* Kids & Families */}
       <section id="kids" className="px-4 sm:px-6 lg:px-8 pb-24">
         <div className="mx-auto max-w-7xl">
-          {/* Hero image */}
           <motion.div {...fadeIn} className="rounded-2xl overflow-hidden mb-16 aspect-[21/9]">
             <img
               src="https://media-01.imu.nl/storage/venneperlodge.nl/23681/leukste-speeltuin-voor-kinderen-met-horeca_venneper-lodge_nieuw_vennep_hoofddorp.jpg"
@@ -51,7 +51,7 @@ export default function Beleving() {
           <SectionHeading
             label="Kids & Families"
             title="Blije kids en blije ouders"
-            description="Kom met je kinderen naar Venneper Lodge. Het leukste restaurant voor het gezin in de regio! Wat dacht u van zowel een indoor en outdoor speelparadijs!"
+            description="Kindvriendelijk restaurant in omgeving Nieuw Vennep, Hoofddorp, Lisse en Lisserbroek. Wat dacht u van zowel een indoor en outdoor speelparadijs!"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -70,9 +70,63 @@ export default function Beleving() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <h3 className="font-display text-2xl font-bold text-center mb-8">Verjaardag vieren</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* Speurtocht */}
+      <section id="speurtocht" className="px-4 sm:px-6 lg:px-8 py-24 bg-warm-sand/30">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            label="Speurtocht"
+            title="GPS Speurtocht in het Venneperhout"
+            description="Beleef een avontuurlijke speurtocht door het prachtige bos naast Venneper Lodge. Leuk voor kinderen 7+ en gezinnen!"
+          />
+
+          <motion.div {...fadeIn} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <MapPinned size={24} className="text-forest-green shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold text-charcoal">Hoe werkt het?</p>
+                    <p className="text-charcoal/70">Download de "Mijnspeurtochten" app, meld je aan bij de bar van Venneper Lodge, en start de route op je eigen tempo.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <PartyPopper size={24} className="text-forest-green shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold text-charcoal">Wat krijg je?</p>
+                    <p className="text-charcoal/70">Leerzame en leuke puzzels over de omgeving. Na afloop ontvang je een heerlijk broodplankje!</p>
+                  </div>
+                </div>
+              </div>
+              <p className="mt-6 text-2xl font-bold text-burnt-amber">€7,50 p.p.</p>
+              <a
+                href="mailto:info@venneperlodge.nl?subject=Speurtocht"
+                className="inline-block mt-4 rounded-full bg-forest-green px-8 py-3 text-white font-semibold hover:bg-forest-green/90 transition-colors"
+              >
+                Meer informatie
+              </a>
+            </div>
+            <img
+              src="https://media-01.imu.nl/storage/venneperlodge.nl/23681/fantastische-horecazaak-hoofddorp-nieuw-vennep_het-beste-restaurant-venneper-lodge.jpg"
+              alt="Speurtocht in het Venneperhout"
+              className="rounded-2xl w-full aspect-[3/2] object-cover"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Verjaardag vieren */}
+      <section id="verjaardag" className="px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            label="Verjaardag vieren"
+            title="Vier je verjaardag bij Venneper Lodge"
+            description="Van Sweet 16 tot een mooie mijlpaal — wij maken er een onvergetelijk feest van. Met een warme, sfeervolle uitstraling temidden van het groen."
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {birthdayPackages.map((pkg, i) => (
               <motion.div
                 key={pkg.name}
@@ -97,6 +151,19 @@ export default function Beleving() {
               </motion.div>
             ))}
           </div>
+
+          <motion.div {...fadeIn} className="rounded-2xl bg-warm-sand/30 p-8 sm:p-12 text-center">
+            <h3 className="font-display text-2xl font-bold">Volwassen verjaardag?</h3>
+            <p className="mt-4 text-charcoal/70 max-w-2xl mx-auto">
+              Intiem dineren, lunchen of een feestelijke avond met muziek — wij regelen het! Kies uit shared dining, BBQ, borrel of een compleet menu. De bovenverdieping met eigen bar is beschikbaar voor exclusief gebruik.
+            </p>
+            <a
+              href="mailto:info@venneperlodge.nl?subject=Verjaardag"
+              className="inline-block mt-6 rounded-full bg-burnt-amber px-8 py-3 text-white font-semibold hover:bg-burnt-amber/90 transition-colors"
+            >
+              Neem contact op
+            </a>
+          </motion.div>
         </div>
       </section>
 
@@ -117,14 +184,38 @@ export default function Beleving() {
             description="Zowel voor een lunch, borrel of diner hebben wij verschillende mogelijkheden. De ruimte bovenin het restaurant biedt de meeste privacy en heeft plaats voor maximaal 100 personen."
           />
 
-          <motion.div {...fadeIn} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          <motion.div {...fadeIn} className="text-center">
+            <p className="text-charcoal/70 max-w-2xl mx-auto text-lg leading-relaxed">
+              Bij gezelschappen vanaf 20 personen doen wij een suggestie voor een menu. Wij houden rekening met allergieën en dieetwensen. Neem contact met ons op om de mogelijkheden te bespreken.
+            </p>
+            <a
+              href="mailto:info@venneperlodge.nl?subject=Groepsarrangement"
+              className="inline-block mt-8 rounded-full bg-burnt-amber px-10 py-4 text-lg font-semibold text-white hover:bg-burnt-amber/90 transition-colors"
+            >
+              Neem contact op
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Private Dining */}
+      <section id="private-dining" className="px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            label="Private Dining"
+            title="Exclusief dineren op de bovenverdieping"
+          />
+
+          <motion.div {...fadeIn} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="font-display text-2xl font-bold">Private Dining</h3>
-              <p className="mt-4 text-charcoal/70 leading-relaxed">
+              <p className="text-charcoal/70 leading-relaxed text-lg">
                 Wil je dineren op een plek waar je ongestoord kunt genieten met je gezelschap? De bovenverdieping heeft een warme en moderne uitstraling. Je beschikt over een eigen ruimte met een eigen bar, waardoor het voelt alsof de lodge even helemaal van jullie is.
               </p>
+              <p className="mt-4 text-charcoal/70 leading-relaxed text-lg">
+                Kies uit een meergangendiner, shared dining of een casual lunch. Ons team verzorgt alles — van menuadvies tot sfeer en inrichting. U hoeft alleen maar te genieten.
+              </p>
               <a
-                href="mailto:info@venneperlodge.nl?subject=Groepsarrangement"
+                href="mailto:info@venneperlodge.nl?subject=Private%20Dining"
                 className="inline-block mt-6 rounded-full bg-burnt-amber px-8 py-3 text-white font-semibold hover:bg-burnt-amber/90 transition-colors"
               >
                 Neem contact op
@@ -140,7 +231,7 @@ export default function Beleving() {
       </section>
 
       {/* Zakelijk */}
-      <section id="zakelijk" className="px-4 sm:px-6 lg:px-8 py-24">
+      <section id="zakelijk" className="px-4 sm:px-6 lg:px-8 py-24 bg-warm-sand/30">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             label="Zakelijk"
@@ -156,7 +247,7 @@ export default function Beleving() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-6 rounded-2xl bg-warm-sand/20 text-center"
+                className="p-6 rounded-2xl bg-white text-center"
               >
                 <feature.icon size={32} className="mx-auto text-forest-green" />
                 <h4 className="font-semibold mt-3">{feature.title}</h4>
@@ -168,7 +259,7 @@ export default function Beleving() {
           <motion.div {...fadeIn} className="rounded-2xl bg-forest-green p-8 sm:p-12 text-center">
             <h3 className="font-display text-3xl font-bold text-warm-white">All-inclusive vergaderarrangementen</h3>
             <p className="mt-4 text-warm-sand/80 max-w-2xl mx-auto">
-              Inclusief vergaderruimte, koffie & thee, lunch, en alle AV-faciliteiten. Vraag vrijblijvend een offerte aan.
+              Inclusief vergaderruimte, koffie & thee, lunch, en alle AV-faciliteiten. Ruime gratis parkeerplaats. Vraag vrijblijvend een offerte aan.
             </p>
             <a
               href="mailto:info@venneperlodge.nl?subject=Offerte%20zakelijk"
