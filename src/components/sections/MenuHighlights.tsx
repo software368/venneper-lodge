@@ -1,0 +1,54 @@
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import SectionHeading from '../ui/SectionHeading'
+
+const dishes = [
+  { name: 'Diner', image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23681/luxe-eten-in-nieuw-vennep-lisserbroek-lisse-en-hoofdorp--ga-naar-venneper-lodge--800x600.png' },
+  { name: 'Poké Bowl', image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23669/in-nieuw-vennep-haal-je-een-salade-of-pokebowl-bij-venneper-lodge.jpg' },
+  { name: 'Lunch', image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23669/een-hamburger-in-nieuw-vennep-haal-je-bij-venneper-lodge.jpg' },
+  { name: 'Cocktails', image: 'https://media-01.imu.nl/storage/venneperlodge.nl/23681/waar-heb-je-lekkere-drankjes-in-nieuw-vennep-lisserbroek-lisse-en-hoofdorp--dat-is-bij-venneper-lodge.png' },
+]
+
+export default function MenuHighlights() {
+  return (
+    <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeading
+          label="Ons menu"
+          title="De heerlijkste gerechten en drankjes"
+          description="De keukenbrigade maakt de heerlijkste salades, vis- en vleesgerechten. Voor ieder wat wils!"
+        />
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          {dishes.map((dish, i) => (
+            <motion.div
+              key={dish.name}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="group relative rounded-2xl overflow-hidden aspect-[3/4]"
+            >
+              <img
+                src={dish.image}
+                alt={dish.name}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-deep-lodge/70 to-transparent" />
+              <span className="absolute bottom-4 left-4 font-display text-lg font-semibold text-warm-white">
+                {dish.name}
+              </span>
+            </motion.div>
+          ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link
+            to="/menu"
+            className="inline-block rounded-full border-2 border-forest-green px-8 py-3 font-semibold text-forest-green transition-all hover:bg-forest-green hover:text-warm-white"
+          >
+            Bekijk de menukaarten
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
