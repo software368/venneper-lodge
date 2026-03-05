@@ -7,21 +7,24 @@ import OverOns from './pages/OverOns'
 import Contact from './pages/Contact'
 import WerkenBij from './pages/WerkenBij'
 import ScrollToTop from './components/ScrollToTop'
+import PasswordGate from './components/PasswordGate'
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/menu" element={<MenuPage />} />
-          <Route path="/beleving" element={<Beleving />} />
-          <Route path="/over-ons" element={<OverOns />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/werken-bij" element={<WerkenBij />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <PasswordGate>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/menu" element={<MenuPage />} />
+            <Route path="/beleving" element={<Beleving />} />
+            <Route path="/over-ons" element={<OverOns />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/werken-bij" element={<WerkenBij />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </PasswordGate>
   )
 }
